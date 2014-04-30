@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-
 <head>
+<title>Siejen Yin-Stevenson</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <style>
-img {
-border-radius: 20px;
-border: white;
-padding: 10px;
-margin: 20px;
-}
-h1 {
-}
-body {
-  text-align: center;
-  background: url("http://stanford.edu/~siejeny/Linen_Grass_Paper.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  font-family: helvetica;
-  }
-  ul {
-      padding: 10px;
-      background: white;
-  }
-	a  {
-		color: gray;
+	img {
+		border: 7px solid white;
+		border-radius: 20px;
+		margin: 20px;
 	}
-  li {
-      display: inline;
-		font: bold 15px arial,sans-serif;
-      padding: 0px 10px 0px 10px;
-  }
+	h1 {
+	}
+	body {
+  		text-align: center;
+  		background: url("http://stanford.edu/~siejeny/Linen_Grass_Paper.jpg");
+  		background-size: cover;
+  		background-position: center;
+  		color: white;
+  		font-family: helvetica;
+  		}
+		ul {
+      		padding: 10px;
+      		background: white;
+		}
+		a  {
+		color: gray;
+		}
+		li {
+			display: inline;
+			font: bold 15px arial,sans-serif;
+			padding: 0px 10px 0px 10px;
+		}
 </style>
 </head>
 
 <body>
-<h1>Siejen's Slideshow</h1>
-<div class="slideshow"></div>
-<button>Next</button>
-<script>
-var slides= [
-	'<img src="http://stanford.edu/~siejeny/JPSandSYSatSUAshaHoli2013_SML.jpg">',
-	'<img src="http://stanford.edu/~siejeny/Mendocino_Sml.jpg">',
-	'<img src="http://stanford.edu/~siejeny/2013-JAN-04%20Las%20Vegas%20xSml.jpg">'
-];
+	<h1>Siejen's Slideshow</h1>
+	<div class="slideshow"></div>
+	<button>Next</button>
+	<script>
+		//"var" = variables//
+		var slides= [
+			'<img src="http://stanford.edu/~siejeny/JPSandSYSatSUAshaHoli2013_SML.jpg">',
+			'<img src="http://stanford.edu/~siejeny/Mendocino_Sml.jpg">',
+			'<img src="http://stanford.edu/~siejeny/2013-JAN-04%20Las%20Vegas%20xSml.jpg">'
+			];
 
-//Keep track of current prompt we're on//
-var SlideIndex = 0;
+		//Keep track of current prompt we're on//
+		var SlideIndex = 0;
 
-// A function that will call the next prompt
-var nextSlide = function() {
-	var ImageTag = slides[SlideIndex % slides.length];
-    $('.slideshow').html( ImageTag );
-    SlideIndex = SlideIndex + 1;
-}
+		// A function that will call the next prompt
+		var nextSlide = function() {
+			var ImageTag = slides[SlideIndex % slides.length];
+			$('.slideshow').html( ImageTag );
+			SlideIndex = SlideIndex + 1;
+		}
 
-// run nextPrompt function when button is clicked //
-$('button').click(function() {
-  nextSlide();
-});
+		// run nextPrompt function when button is clicked //
+		$('button').click(function() {
+			nextSlide();
+		});
 
-nextSlide();
-</script>
-<ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about_me.html">About Me</a></li>
-      <li><a href="experience.html">My Experience</a></li>
-      <li><a href="PhotoMontage.html">Photo Montage</a></li>
-	  <li><a href="slideshow.html">Slideshow</a></li>
-    </ul>
+		nextSlide();
+		</script>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about_me.html">About Me</a></li>
+			<li><a href="experience.html">My Experience</a></li>
+			<li><a href="PhotoMontage.html">Photo Montage</a></li>
+			<li><a href="slideshow.html">Slideshow</a></li>
+		</ul>
 </body>
