@@ -38,20 +38,33 @@
 	<div class="slideshow"></div>
 	<button>Next</button>
 	<script>
-		//"var" = variables//
+		// "var" = declaring a new variable //
+		// in this case, the variable name is slides //
+		// slides hold an array of image tags //
+		// image tags will be retrieved when user clicks the button //
 		var slides= [
 			'<img src="http://stanford.edu/~siejeny/JPSandSYSatSUAshaHoli2013_SML.jpg">',
 			'<img src="http://stanford.edu/~siejeny/Mendocino_Sml.jpg">',
 			'<img src="http://stanford.edu/~siejeny/2013-JAN-04%20Las%20Vegas%20xSml.jpg">'
 			];
 
-		//Keep track of current prompt we're on//
+		// SlideIndex keeps track of current slide we're on //
+		// The SlideIndex must start at 0 and is the starting point for the slide show //
 		var SlideIndex = 0;
 
-		// A function that will call the next prompt
+		// "var" = declaring a new function //
+		// This function is called nextSlide //
+		// This function is activated when the user clicks the button //
+		// The function updates the HTML with the next slide //
+			// .length tells me how many entries are in an array //
+			// In this case, there are 3 entries in the array //
+			// As the numerical value of the Slide Index continues to increase, we it divide by 3 //
+			// And use the remainder to select from corresponding slide number in array //
 		var nextSlide = function() {
 			var ImageTag = slides[SlideIndex % slides.length];
 			$('.slideshow').html( ImageTag );
+			// SlideIndex is a stored value, and we will increment it by 1 everytime user clicks //
+			// We will use new value next time we click //
 			SlideIndex = SlideIndex + 1;
 		}
 
